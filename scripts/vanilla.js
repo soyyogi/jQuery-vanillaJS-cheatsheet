@@ -1,11 +1,18 @@
 //////// vanilla section /////////////
 const vanilla = document.querySelector('.vanilla');
 Object.assign(vanilla.style, {
-    width: '49.9%',
+    'display': 'flex',
+    'flex-direction': 'column',
+    'width': '49.9%'
+})
+
+Object.assign(document.querySelector('.vanilla > h2:first-of-type').style, {
+    'text-align': 'center',
     'color': '#eee',
     'background': '#0769AD',
+    'padding': '16px',
+    'margin': 0
 })
-document.querySelector('.vanilla > h2:first-of-type').style.textAlign = 'center'
 
 // function create(element){ return document.createElement('')}
 // Events

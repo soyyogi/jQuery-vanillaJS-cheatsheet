@@ -19,12 +19,18 @@ $('header').css({
 //////// jQuery section /////////////
 const jQuery = $('.jQuery');
 jQuery.css({
-    width: '49.9%',
-    'color': '#eee',
-    'background': '#0769AD'
+    'display': 'flex',
+    'flex-direction': 'column',
+    'width': '49.9%'    
 })
 
-$('.jQuery > h2').first().css({'text-align': 'center'})
+$('.jQuery > h2').first().css({
+    'text-align': 'center',
+    'color': '#eee',
+    'background': '#0769AD',
+    'padding': '16px',
+    'margin': 0
+})
 
 // Events
 //     • When the HTML document has been loaded and you can manipulate it with JavaScript
@@ -71,3 +77,25 @@ $('.jQuery > h2').first().css({'text-align': 'center'})
 //     • Show an alert with the value of the first <input> of the page (Create an <input> element to test this case)
 //     • Remove all items from a specific selector
 //     • Animate an item after 2 seconds from the initial page load
+
+function renderBlock({title, example}, code){
+    const codeBlock = $(`<pre>${code}</pre>`).css({
+        'background': '#333',
+        'color': '#ccc',
+        'padding': '12px',
+        'overflow-x': 'scroll'
+    })
+    const head = $(`<h5>${title}</h5>`).css({
+        'margin': '10px 0'
+    })
+    let ex = null
+    if(example != undefined){
+        ex = example
+    }
+    const result = $(`<div></div>`).css({
+        'display': 'flex',
+        'flex-direction': 'column',
+        'padding': '8px'
+    }).append(head, ex, codeBlock)
+    jQuery.append(result)
+}
