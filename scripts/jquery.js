@@ -4,7 +4,7 @@ $('#root').css({
     'flex-wrap': 'wrap',
     'justify-content': 'space-between',
     'margin': '10px',
-}).append($('<header>Cheat Sheet</header><section class="jQuery"><h2>jQuery</h2></section><section class="vanilla"><h2>Vanilla</h2></section>'));
+}).append($('<header>Cheat Sheet</header><section class="jQuery"><h2>jQuery</h2></section><section class="vanilla"><h2>Vanilla JavaScript</h2></section>'));
 
 $('header').css({
     'width': '100%',
@@ -13,7 +13,7 @@ $('header').css({
     'font-size': '28px',
     'text-align': 'center',
     'color': '#eee',
-    'background': 'url("https://api.jquery.com/jquery-wp-content/themes/jquery/images/dark-grey-tile.png")'
+    'background': 'url("../images/header-background.png")'
 })
 
 //////// jQuery section /////////////
@@ -21,7 +21,12 @@ const jQuery = $('.jQuery');
 jQuery.css({
     'display': 'flex',
     'flex-direction': 'column',
-    'width': '49.9%'
+    'width': '49.9%',
+    'background-image': 'url("../images/jquery-background.png")',
+    'background-repeat': 'repeat-y',
+    'background-size': 'contain',
+    'background-color': 'rgba(250,250,250,0.95)',
+    'background-blend-mode': 'lighten',
 })
 
 $('.jQuery > h2').first().css({
@@ -37,13 +42,18 @@ const vanilla = $('.vanilla');
 vanilla.css({
     'display': 'flex',
     'flex-direction': 'column',
-    'width': '49.9%'
+    'width': '49.9%',
+    'background-image': 'url("../images/javascript-background.jpg")',
+    'background-repeat': 'repeat-y',
+    'background-size': 'contain',
+    'background-color': 'rgba(255,255,255,0.95)',
+    'background-blend-mode': 'lighten',
 })
 
 $('.vanilla > h2').first().css({
     'text-align': 'center',
-    'color': '#eee',
-    'background': '#0769AD',
+    'color': '#333',
+    'background': '#EFD81D',
     'padding': '16px',
     'margin': 0
 })
@@ -410,7 +420,9 @@ function renderBlock({title, example}, code){
     let head;
     if(title != undefined){
         head = $(`<h4>${title}</h4>`).css({
-            'margin': '10px 0'
+            'margin': '10px 0',
+            'font-size': '20px',
+            'color': '#0E2D2F'
         })
     }
     let ex;
