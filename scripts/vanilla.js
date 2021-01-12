@@ -123,17 +123,115 @@ object.addEventListener("click", function(e) {
 `))
 // Functions and Selectors
 //     • Create an HTML element with any text value
+
+vanilla.append(renderBlock({},
+`
+
+const newEl = document.createElement(nodename)
+newEl.textContent = 'text here'
+
+
+`))
 //     • Remove an HTML element with any text value
+
+vanilla.append(renderBlock({},
+`
+
+
+document.querySelector(selector).remove()
+
+
+`))
 //     • Append an HTML element with any text value to a parent element
+
+vanilla.append(renderBlock({},
+`
+
+
+node.appendChild(node)
+
+
+`))
 //     • Prepend an HTML element with any text value to a parent element
+
+vanilla.append(renderBlock({},
+`
+const parentEl = document.getElementById(selector)
+const newEl = document.createElement(nodename)
+newEl.textContent = 'Some text here'
+parentEl.insertBefore(newEl, parentEl.firstChild)
+
+`))
 //     • Create and add an HTML element with any text value after another element
+
 //     • Create and add an HTML element with any text value before another element
+
 //     • Clone an HTML element within other element
+
+vanilla.append(renderBlock({},
+`
+
+var elmnt = document.querySelector(selector);
+var cln = elmnt.cloneNode(true);
+document.body.appendChild(cln);
+
+
+`))
 //     • Add a class to an HTML item
+
+vanilla.append(renderBlock({},
+`
+
+
+document.querySelector(selector).classList.add(classname);
+
+
+
+`))
 //     • Remove a class to an HTML item
+
+vanilla.append(renderBlock({},
+`
+
+
+document.querySelector(selector).classList.remove(classname);
+
+
+
+`))
 //     • Toggle a class of an HTML item
+
+vanilla.append(renderBlock({},
+`
+
+
+document.querySelector(selector).classList.toggle(classname);
+
+
+
+`))
 //     • Add a disabled attribute to an HTML button
+
+vanilla.append(renderBlock({},
+`
+
+
+$(selector).setAttribute('disabled', true)
+
+
+
+`))
 //     • Remove the disabled attribute of an HTML button
+
+vanilla.append(renderBlock({},
+`
+
+
+$(selector).removeAttribute('disabled')
+
+
+
+`))
 //     • Set a data-src attribute to a img element
 //     • Remove the data-src attribute of the img element
 //     • Hide an HTML element on click (display: none)
