@@ -1,34 +1,126 @@
-//////// vanilla section /////////////
-const vanilla = document.querySelector('.vanilla');
-Object.assign(vanilla.style, {
-    'display': 'flex',
-    'flex-direction': 'column',
-    'width': '49.9%'
-})
-
-Object.assign(document.querySelector('.vanilla > h2:first-of-type').style, {
-    'text-align': 'center',
-    'color': '#eee',
-    'background': '#0769AD',
-    'padding': '16px',
-    'margin': 0
-})
-
-// function create(element){ return document.createElement('')}
-// Events
+//////// Events //////////////
 //     • When the HTML document has been loaded and you can manipulate it with JavaScript
+
+vanilla.append(renderBlock({},
+
+`
+document.addEventListener('DOMContentLoaded', function(event) {
+    //the event occurred
+})
+
+
+            OR
+
+
+document.addEventListener('DOMContentLoaded', (event) => {
+    //the event occurred
+})
+`
+))
+
 //     • When an HTML item has been clicked
+
+vanilla.append(renderBlock({},
+`
+object.onclick = function(){myScript};
+            OR
+object.addEventListener("click", myScript);
+`))
+
 //     • When an HTML item has been double clicked
+
+vanilla.append(renderBlock({},
+`
+object.ondblclick = function(){myScript};
+            OR
+object.addEventListener("dblclick", myScript);
+`))
 //     • When the user presses a key on the keyboard
+
+vanilla.append(renderBlock({},
+`
+object.onkeypress = function(){myScript};
+            OR
+object.addEventListener("keypress", myScript);
+`))
 //     • When the user moves the mouse cursor
+
+vanilla.append(renderBlock({},
+`
+object.onmousemove = function(){myScript};
+            OR
+object.addEventListener("mousemove", myScript);
+`))
 //     • When the user changes a value of an text input
+
+vanilla.append(renderBlock({},
+`
+object.onchange = function(){myScript};
+            OR
+object.addEventListener("change", myScript);
+`))
 //     • When an image is loaded
+
+vanilla.append(renderBlock({},
+`
+object.onload = function(){myScript};
+            OR
+object.addEventListener("load", myScript);
+`))
 //     • When an image fails to load, (if you write an incorrect image url the loading of the image will fail)
+
+vanilla.append(renderBlock({},
+`
+object.onerror = function(){myScript};
+            OR
+object.addEventListener("error", myScript);
+`))
 //     • When a form is submitted
+
+vanilla.append(renderBlock({},
+`
+object.onsubmit = function(){myScript};
+            OR
+object.addEventListener("submit", myScript);
+
+`))
 //     • When the user changes the option of a select element
+
+vanilla.append(renderBlock({},
+`
+object.onchange = function(){myScript};
+            OR
+object.addEventListener("change", myScript);
+`))
 //     • When you position the mouse over an element
+
+vanilla.append(renderBlock({},
+`
+object.onmouseenter = function(){myScript};
+            OR
+object.addEventListener("mouseenter", myScript);
+`))
 //     • When a checkbox is checked or unchecked
+
+vanilla.append(renderBlock({},
+`
+
+document.getElementById("myCheck").checked;
+
+
+
+
+
+`))
 //     • When a ul list item is clicked, show the item that was clicked
+
+vanilla.append(renderBlock({},
+`
+object.addEventListener("click", function(e) {
+    console.log(e.target)
+    // vanilla js code
+});
+`))
 // Functions and Selectors
 //     • Create an HTML element with any text value
 //     • Remove an HTML element with any text value

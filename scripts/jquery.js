@@ -21,7 +21,7 @@ const jQuery = $('.jQuery');
 jQuery.css({
     'display': 'flex',
     'flex-direction': 'column',
-    'width': '49.9%'    
+    'width': '49.9%'
 })
 
 $('.jQuery > h2').first().css({
@@ -32,10 +32,26 @@ $('.jQuery > h2').first().css({
     'margin': 0
 })
 
+//////// vanilla section /////////////
+const vanilla = $('.vanilla');
+vanilla.css({
+    'display': 'flex',
+    'flex-direction': 'column',
+    'width': '49.9%'
+})
+
+$('.vanilla > h2').first().css({
+    'text-align': 'center',
+    'color': '#eee',
+    'background': '#0769AD',
+    'padding': '16px',
+    'margin': 0
+})
+
 //////// Events //////////////
 //     • When the HTML document has been loaded and you can manipulate it with JavaScript
 
-renderBlock({
+jQuery.append(renderBlock({
     title: 'When the HTML document has been loaded and you can manipulate it with JavaScript'
 },
 
@@ -51,11 +67,11 @@ $(document).ready(function() {
 $(function(){ 
 	//jQuery code here 
 });`
-)
+))
 
 //     • When an HTML item has been clicked
 
-renderBlock({
+jQuery.append(renderBlock({
     title: 'When an HTML item has been clicked',
     example: $('<button>Click me</button>').click(function(){ alert('Button clicked')}).css({
         'width': 'fit-content'
@@ -65,11 +81,11 @@ renderBlock({
 $('button').click(function() {
     //jQuery code here
 })
-`)
+`))
 
 //     • When an HTML item has been double clicked
 
-renderBlock({
+jQuery.append(renderBlock({
     title: 'When an HTML item has been double clicked',
     example: $('<button>Click me</button>').dblclick(function(){ alert('Button double clicked')}).css({
         'width': 'fit-content'
@@ -79,10 +95,10 @@ renderBlock({
 $('button').dblclick(function() {
     //jQuery code here
 })
-`)
+`))
 //     • When the user presses a key on the keyboard
 
-renderBlock({
+jQuery.append(renderBlock({
     title: 'When the user presses a key on the keyboard',
     example: $('<input type="text" placeholder="type here">').keypress(()=>alert('Key pressed')).css({
         'width': 'fit-content'
@@ -92,10 +108,10 @@ renderBlock({
 $('input').keypress(function() {
     //jQuery code here
 })
-`)
+`))
 //     • When the user moves the mouse cursor
 
-renderBlock({
+jQuery.append(renderBlock({
     title: 'When the user moves the mouse cursor',
     example: $('<span></span>').mousemove(function(){ alert('Mouse moved')}).css({
         'width': '100px',
@@ -107,10 +123,10 @@ renderBlock({
 $('span').mousemove(function() {
     //jQuery code here
 })
-`)
+`))
 //     • When the user changes a value of an text input
 
-renderBlock({
+jQuery.append(renderBlock({
     title: 'When the user changes a value of an text input',
     example: $('<input type="text" value="edit here">').change(()=>alert('Value changed')).css({
         'width': 'fit-content'
@@ -120,10 +136,10 @@ renderBlock({
 $('input').change(function() {
     //jQuery code here
 })
-`)
+`))
 //     • When an image is loaded
 
-renderBlock({
+jQuery.append(renderBlock({
     title: 'When an image is loaded',
     example: $('<button class="imgloader">Load image</button>').click(function(){$('.imgloader').after($('<img src="https://img2.pngio.com/jquery-logo-web-development-jquery-ui-javascript-computer-icons-jquery-png-910_500.png">').css('width','200px').ready(()=>alert('image loaded'))); $('.imgloader').off()}).css({
         'width': 'fit-content'
@@ -131,13 +147,12 @@ renderBlock({
 },
 `
 $('img').ready(function() {
-    //jQuery code here
     // .load() is deprecated and removed
 })
-`)
+`))
 //     • When an image fails to load, (if you write an incorrect image url the loading of the image will fail)
 
-renderBlock({
+jQuery.append(renderBlock({
     title: 'When an image fails to load',
     example: $('<button class="imgfail">Load image</button>').click(function(){$('.imgfail').after($('<img src="https://i2.pngio.com/jquery-logo-web-development-jquery-ui-javascript-computer-icons-jquery-png-910_500.png">').css('width','200px').on('error', ()=>alert('image load failed'))); $('.imgfail').off()}).css({
         'width': 'fit-content'
@@ -145,13 +160,12 @@ renderBlock({
 },
 `
 $('img').on('error', function() {
-    //jQuery code here
     // .error() is deprecated and removed
 })
-`)
+`))
 //     • When a form is submitted
 
-renderBlock({
+jQuery.append(renderBlock({
     title: 'When a form is submitted',
     example: $('<form><input type="text" value="Full Name"><button>Submit</button></form>').submit((e)=>{e.preventDefault(); alert('form submitted')}).css({
         'width': 'fit-content'
@@ -162,10 +176,10 @@ $('form').submit(function(e) {
     e.preventDefault()
     //jQuery code here
 })
-`)
+`))
 //     • When the user changes the option of a select element
 
-renderBlock({
+jQuery.append(renderBlock({
     title: 'When the user changes the option of a select element',
     example: $('<select><option value="angular">Angular</option><option value="vue">Vue</option><option value="react">React</option></select>').change(()=>alert('Value changed')).css({
         'width': 'fit-content'
@@ -175,10 +189,10 @@ renderBlock({
 $('select').change(function() {
     //jQuery code here
 })
-`)
+`))
 //     • When you position the mouse over an element
 
-renderBlock({
+jQuery.append(renderBlock({
     title: 'When you position the mouse over an element',
     example: $('<span></span>').mouseenter(function(){ alert('Mouse entered')}).css({
         'width': '100px',
@@ -190,10 +204,10 @@ renderBlock({
 $('span').mouseenter(function() {
     //jQuery code here
 })
-`)
+`))
 //     • When a checkbox is checked or unchecked
 
-renderBlock({
+jQuery.append(renderBlock({
     title: 'When a checkbox is checked or unchecked',
     example: $('<label for="check" >Try me</label><input id="check" type="checkbox">').click((e)=>{if($(e.target).is(':checked')){alert('Checked')} else {alert('Unchecked')}}).css({
         'width': 'fit-content'
@@ -207,21 +221,21 @@ $('input').click(function(e) {
         //jQuery code here
     }
 })
-`)
+`))
 //     • When a ul list item is clicked, show the item that was clicked
 
-renderBlock({
+jQuery.append(renderBlock({
     title: 'When a ul list item is clicked, show the item that was clicked',
     example: $('<ul class="list"><li>One</li><li>Two</li><li>Three</li></ul>').click(function(e){alert(e.target.textContent + ' is clicked')}).css({
         'width': 'fit-content'
     })
 },
 `
-$('ul').children().click(function(e) {
+$('ul').click(function(e) {
     console.log(e.target)
     //jQuery code here
 })
-`)
+`))
 // Functions and Selectors
 //     • Create an HTML element with any text value
 //     • Remove an HTML element with any text value
@@ -260,17 +274,22 @@ function renderBlock({title, example}, code){
         'padding': '12px',
         'overflow-x': 'scroll'
     })
-    const head = $(`<h5>${title}</h5>`).css({
-        'margin': '10px 0'
-    })
-    let ex = null
+    let head;
+    if(title != undefined){
+        head = $(`<h4>${title}</h4>`).css({
+            'margin': '10px 0'
+        })
+    }
+    let ex;
     if(example != undefined){
         ex = example
     }
     const result = $(`<div></div>`).css({
         'display': 'flex',
         'flex-direction': 'column',
-        'padding': '8px'
+        'padding': '8px',
+        'height': '300px',
+        'justify-content': 'flex-end'
     }).append(head, ex, codeBlock)
-    jQuery.append(result)
+    return result;
 }
