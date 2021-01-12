@@ -34,7 +34,9 @@ $('.jQuery > h2').first().css({
     'color': '#eee',
     'background': '#0769AD',
     'padding': '16px',
-    'margin': 0
+    'margin': 0,
+    'position': 'sticky',
+    'top': 0
 })
 
 //////// vanilla section /////////////
@@ -55,7 +57,9 @@ $('.vanilla > h2').first().css({
     'color': '#333',
     'background': '#EFD81D',
     'padding': '16px',
-    'margin': 0
+    'margin': 0,
+    'position': 'sticky',
+    'top': 0
 })
 
 //////// Events //////////////
