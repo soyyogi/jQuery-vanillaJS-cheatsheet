@@ -238,17 +238,150 @@ $('ul').click(function(e) {
 `))
 // Functions and Selectors
 //     • Create an HTML element with any text value
+
+jQuery.append(renderBlock({
+    title: 'Create an HTML element with any text value',
+    example: $('<p>This is a paragraph.</p>').css({
+        'width': 'fit-content'
+    })
+},
+`
+
+
+$('&lt;p&gt;This is a paragraph.&lt;/p&gt;')
+
+
+`))
 //     • Remove an HTML element with any text value
+
+jQuery.append(renderBlock({
+    title: 'Remove an HTML element with any text value',
+},
+`
+
+
+$('p').remove()
+
+
+`))
 //     • Append an HTML element with any text value to a parent element
+
+jQuery.append(renderBlock({
+    title: 'Append an HTML element with any text value to a parent element',
+    example: $('<div><h4>This is parent element</h4></div>').append($('<p>This is a paragraph.</p>')).css({
+        'width': 'fit-content'
+    })
+},
+`
+
+
+$('div').append($('&lt;p&gt;This is a paragraph.&lt;/p&gt;'))
+
+
+`))
 //     • Prepend an HTML element with any text value to a parent element
+
+jQuery.append(renderBlock({
+    title: 'Prepend an HTML element with any text value to a parent element',
+    example: $('<div><h4>This is parent element</h4></div>').prepend($('<p>This is a paragraph.</p>')).css({
+        'width': 'fit-content'
+    })
+},
+`
+
+
+$('div').prepend($('&lt;p&gt;This is a paragraph.&lt;/p&gt;'))
+
+
+`))
 //     • Create and add an HTML element with any text value after another element
+
 //     • Create and add an HTML element with any text value before another element
+
 //     • Clone an HTML element within other element
+
+jQuery.append(renderBlock({
+    title: 'Clone an HTML element within other element'
+},
+`
+
+
+$('div').append($('&lt;p&gt;This is a paragraph.&lt;/p&gt;').clone())
+
+
+
+`))
 //     • Add a class to an HTML item
+
+jQuery.append(renderBlock({
+    title: 'Add a class to an HTML item'
+},
+`
+
+
+$(selector).addClass(classname,function(index,currentclass))
+
+
+
+`))
 //     • Remove a class to an HTML item
+
+jQuery.append(renderBlock({
+    title: 'Remove a class to an HTML item'
+},
+`
+
+
+$(selector).removeClass(classname,function(index,currentclass))
+
+
+
+`))
 //     • Toggle a class of an HTML item
+
+jQuery.append(renderBlock({
+    title: 'Toggle a class of an HTML item'
+},
+`
+
+
+$(selector).toggleClass(classname,function(index,currentclass),switch)
+
+
+
+`))
 //     • Add a disabled attribute to an HTML button
+
+jQuery.append(renderBlock({
+    title: 'Add a disabled attribute to an HTML button',
+    example: $('<button>Click me</button>').attr('disabled', true).css({
+        'width': 'fit-content'
+    })
+},
+`
+
+
+$(selector).attr('disabled', true)
+
+
+
+`))
 //     • Remove the disabled attribute of an HTML button
+
+jQuery.append(renderBlock({
+    title: 'Remove the disabled attribute of an HTML button',
+    example: $('<button>Click me</button>').removeAttr('disabled').css({
+        'width': 'fit-content'
+    })
+},
+`
+
+
+$(selector).removeAttr('disabled')
+
+
+
+`))
 //     • Set a data-src attribute to a img element
 //     • Remove the data-src attribute of the img element
 //     • Hide an HTML element on click (display: none)
