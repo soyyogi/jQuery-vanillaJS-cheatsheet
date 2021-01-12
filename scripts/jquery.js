@@ -393,9 +393,59 @@ $(selector).removeAttr('disabled')
 
 `))
 //     • Set a data-src attribute to a img element
+
+jQuery.append(renderBlock({
+    title: 'Set a data-src attribute to a img element'
+},
+`
+
+
+$(selector).data('src','newValue');
+
+
+
+`))
 //     • Remove the data-src attribute of the img element
+
+jQuery.append(renderBlock({
+    title: 'Remove the data-src attribute of the img element'
+},
+`
+
+
+$(selector).removeData('src').removeAttr('src');
+
+
+
+`))
 //     • Hide an HTML element on click (display: none)
+
+jQuery.append(renderBlock({
+    title: 'Hide an HTML element on click (display: none)',
+    example: $('<p class="phide">This is a paragraph</p><button>Hide</button>').css({'width': 'fit-content'}).click(()=>{$('.phide').hide()})
+},
+`
+
+
+$(selector).hide(speed,callback);
+
+
+
+`))
 //     • Show an HTML element on click (display: block)
+
+jQuery.append(renderBlock({
+    title: 'Show an HTML element on click (display: block)',
+    example: $('<p class="pshow" hidden>This is a paragraph</p><button>Show</button>').css({'width': 'fit-content'}).click(()=>{$('.pshow').show()})
+},
+`
+
+
+$(selector).show(speed,callback);
+
+
+
+`))
 //     • Fade in an HTML element using jQuery
 //     • Fade out an HTML element using jQuery
 //     • Iterate a collection of elements and apply a change of style on them

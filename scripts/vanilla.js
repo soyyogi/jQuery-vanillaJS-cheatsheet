@@ -216,7 +216,7 @@ vanilla.append(renderBlock({},
 `
 
 
-$(selector).setAttribute('disabled', true)
+document.querySelector(selector).setAttribute('disabled', true)
 
 
 
@@ -227,15 +227,55 @@ vanilla.append(renderBlock({},
 `
 
 
-$(selector).removeAttribute('disabled')
+document.querySelector(selector).removeAttribute('disabled')
 
 
 
 `))
 //     • Set a data-src attribute to a img element
+
+vanilla.append(renderBlock({},
+`
+
+
+document.querySelector(selector).setAttribute('data-src', 'newVal');
+
+
+
+`))
 //     • Remove the data-src attribute of the img element
+
+vanilla.append(renderBlock({},
+`
+
+
+document.querySelector(selector).removeAttribute('data-src');
+
+
+
+`))
 //     • Hide an HTML element on click (display: none)
+
+vanilla.append(renderBlock({},
+`
+
+
+document.querySelector(selector).style.display = "none";
+
+
+
+`))
 //     • Show an HTML element on click (display: block)
+
+vanilla.append(renderBlock({},
+`
+
+
+document.querySelector(selector).style.display = "initial";
+
+
+
+`))
 //     • Fade in an HTML element using jQuery
 //     • Fade out an HTML element using jQuery
 //     • Iterate a collection of elements and apply a change of style on them
